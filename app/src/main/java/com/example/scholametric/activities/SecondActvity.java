@@ -1,7 +1,9 @@
-package com.example.scholametric;
+package com.example.scholametric.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.scholametric.R;
 
 public class SecondActvity extends AppCompatActivity {
 
