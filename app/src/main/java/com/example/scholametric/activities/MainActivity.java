@@ -1,21 +1,23 @@
 package com.example.scholametric.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 import com.example.scholametric.Api.ApiUtils;
 import com.example.scholametric.Api.UserService;
 import com.example.scholametric.R;
 import com.example.scholametric.model.ResObj;
+
+import retrofit2.Response;
+import retrofit2.Call;
+import retrofit2.Callback;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) {
                 if(response.isSuccessful()){
-                    ResObj resObj = response.body();
+                    ResObj resObj = (ResObj) response.body();
                     if(resObj.getMessage().equals("true")){
                         //login start main activity
                         Intent intent = new Intent(MainActivity.this, SecondActvity.class);
