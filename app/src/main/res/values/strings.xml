@@ -6,4 +6,5 @@
     <string name="username">Username</string>
     <string name="login_image">LoginImage</string>
     <string name="card_view_image">Card View Image</string>
+    <string name="settings">Settings</string>
 </resources>
