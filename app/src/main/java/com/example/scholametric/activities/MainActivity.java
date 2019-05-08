@@ -67,14 +67,15 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call call, Response response) {
                 if(response.isSuccessful()){
                     Users users = (Users) response.body();
-                    if(users.getUsername().equals("")&&users.getPassword().equals("")){
-                        //login start main activity
-                        Intent intent = new Intent(MainActivity.this, SecondActvity.class);
-                        intent.putExtra("username", username);
-                        startActivity(intent);
+                    if (users != null) {
+                        if(users.getUsername().equals("")&& users.getPassword().equals("")){
+                            //login start main activity
+                            Intent intent = new Intent(MainActivity.this, SecondActvity.class);
+                            startActivity(intent);
 
-                    } else {
-                        Toast.makeText(MainActivity.this, "The username or password is incorrect", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(MainActivity.this, "The username or password is incorrect", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 } else {
                     Toast.makeText(MainActivity.this, "Error! Please try again!", Toast.LENGTH_SHORT).show();

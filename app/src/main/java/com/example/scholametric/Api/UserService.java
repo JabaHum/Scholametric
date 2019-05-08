@@ -6,6 +6,6 @@ import retrofit2.http.Path;
 
 public interface UserService {
 
-    @GET("db_connect/{username}/{password}")
+    @GET("android_login_api/")
     Call login(@Path("username") String username, @Path("password") String password);
 }
