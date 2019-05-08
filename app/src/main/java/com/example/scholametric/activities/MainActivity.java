@@ -11,11 +11,11 @@ import android.widget.Toast;
 import com.example.scholametric.Api.ApiUtils;
 import com.example.scholametric.Api.UserService;
 import com.example.scholametric.R;
-import com.example.scholametric.model.ResObj;
+import com.example.scholametric.model.Users;
 
-import retrofit2.Response;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 
 
@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) {
                 if(response.isSuccessful()){
-                    ResObj resObj = (ResObj) response.body();
-                    if(resObj.getMessage().equals("true")){
+                    Users users = (Users) response.body();
+                    if(users.getUsername().equals("")&&users.getPassword().equals("")){
                         //login start main activity
                         Intent intent = new Intent(MainActivity.this, SecondActvity.class);
                         intent.putExtra("username", username);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call call, Throwable t) {
-                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Failed to make connection to server", Toast.LENGTH_SHORT).show();
             }
         });
     }
