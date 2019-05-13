@@ -1,6 +1,5 @@
 package com.example.scholametric.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,20 +7,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.scholametric.Api.ApiUtils;
-import com.example.scholametric.Api.UserService;
+import com.example.scholametric.Api.ApiInterface;
 import com.example.scholametric.R;
 import com.example.scholametric.model.Users;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    UserService userService;
+    ApiInterface apiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,13 @@ public class MainActivity extends AppCompatActivity {
         final EditText pwd = findViewById(R.id.password);
         final Button login_btn = findViewById(R.id.login_button);
 
-        userService = ApiUtils.getUserService();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.137.1/android_login_api")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        apiInterface = retrofit.create(ApiInterface.class);
+
 
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,30 +68,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void doLogin(final String username,final String password){
-        Call call = userService.login(username,password);
-        call.enqueue(new Callback() {
-            @Override
-            public void onResponse(Call call, Response response) {
-                if(response.isSuccessful()){
-                    Users users = (Users) response.body();
-                    if (users != null) {
-                        if(users.getUsername().equals("")&& users.getPassword().equals("")){
-                            //login start main activity
-                            Intent intent = new Intent(MainActivity.this, SecondActvity.class);
-                            startActivity(intent);
 
-                        } else {
-                            Toast.makeText(MainActivity.this, "The username or password is incorrect", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                } else {
-                    Toast.makeText(MainActivity.this, "Error! Please try again!", Toast.LENGTH_SHORT).show();
-                }
+        Call <List<Users>> call = apiInterface.getUsersDetails();
+        call.enqueue(new Callback<List<Users>>() {
+            @Override
+            public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {
+
             }
 
             @Override
-            public void onFailure(Call call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Failed to make connection to server", Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<List<Users>> call, Throwable t) {
+
             }
         });
     }
