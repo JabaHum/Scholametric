@@ -1,5 +1,6 @@
 package com.example.scholametric.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -73,12 +74,25 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<List<Users>>() {
             @Override
             public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {
+                if(response.isSuccessful()){
+                    Users users = (Users) response.body();
+                    if(users!=null){
+                        if(users.getUsername().equals(username)&& users.getPassword().equals(password)){
+                            //login start main activity
+                            Intent intent = new Intent(MainActivity.this, SecondActvity.class);
+                            startActivity(intent);
+
+                        } else {
+                            Toast.makeText(MainActivity.this, "The username or password is incorrect", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
 
             }
 
             @Override
             public void onFailure(Call<List<Users>> call, Throwable t) {
-
+                Toast.makeText(MainActivity.this, "Failed to make connection to server", Toast.LENGTH_SHORT).show();
             }
         });
     }
