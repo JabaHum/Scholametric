@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.example.scholametric.R;
 
-public class SecondActvity extends AppCompatActivity {
+public class Electives extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_actvity);
+        setContentView(R.layout.activity_electives);
     }
 }

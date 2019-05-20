@@ -20,25 +20,30 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static com.example.scholametric.R.layout.activity_main;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    EditText usr;
+    EditText pwd;
+    Button login_btn;
     ApiInterface apiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(activity_main);
 
-        final EditText usr = findViewById(R.id.username);
-        final EditText pwd = findViewById(R.id.password);
-        final Button login_btn = findViewById(R.id.login_button);
+        usr = findViewById(R.id.username);
+        pwd = findViewById(R.id.password);
+        login_btn = findViewById(R.id.login_button);
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.137.1/android_login_api")
+                .baseUrl("http://192.168.137.1/android_login_api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+
         apiInterface = retrofit.create(ApiInterface.class);
 
 
@@ -67,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
-
+//TODO retrofit call section
     private void doLogin(final String username,final String password){
 
         Call <List<Users>> call = apiInterface.getUsersDetails();
@@ -76,10 +81,10 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {
                 if(response.isSuccessful()){
                     Users users = (Users) response.body();
-                    if(users!=null){
-                        if(users.getUsername().equals(username)&& users.getPassword().equals(password)){
+                    if(users!=null) {
+                        if (users.getUsername().equals(username) && users.getPassword().equals(password)) {
                             //login start main activity
-                            Intent intent = new Intent(MainActivity.this, SecondActvity.class);
+                            Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
                             startActivity(intent);
 
                         } else {

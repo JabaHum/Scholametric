@@ -2,6 +2,10 @@
   <dictionary name="Jeremy">
     <words>
       <w>actvity</w>
+      <w>cardimage</w>
+      <w>cardname</w>
+      <w>dataset</w>
+      <w>viewholder</w>
     </words>
   </dictionary>
 </component>

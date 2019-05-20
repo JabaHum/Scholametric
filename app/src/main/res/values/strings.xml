@@ -7,4 +7,16 @@
     <string name="login_image">LoginImage</string>
     <string name="card_view_image">Card View Image</string>
     <string name="settings">Settings</string>
+
+    // this is a string array for the second activity card textviews
+    <string-array name="actvity2card">
+        <item>Student</item>
+        <item>Teachers</item>
+        <item>Health</item>
+        <item>Accommodation</item>
+        <item>Finance</item>
+        <item>Entertainment</item>
+        <item>Transport</item>
+        <item>Assignment</item>
+    </string-array>
 </resources>
