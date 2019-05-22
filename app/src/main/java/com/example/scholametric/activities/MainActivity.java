@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 if(validateLogin(username, password)){
                     //do login
                     doLogin(username, password);
+                    //doLogin();
                 }
 
             }
@@ -74,23 +75,41 @@ public class MainActivity extends AppCompatActivity {
     }
 //TODO retrofit call section
     private void doLogin(final String username,final String password){
+        //final String username,final String password
 
-        Call <List<Users>> call = apiInterface.getUsersDetails();
+       Call <List<Users>> call = apiInterface.getUsersDetails();
         call.enqueue(new Callback<List<Users>>() {
+
             @Override
             public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {
                 if(response.isSuccessful()){
-                    Users users = (Users) response.body();
-                    if(users!=null) {
-                        if (users.getUsername().equals(username) && users.getPassword().equals(password)) {
-                            //login start main activity
-                            Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
-                            startActivity(intent);
 
+                    Users users = (Users) response.body();
+                    if(users!= null) {
+                        /* Toast.makeText(MainActivity.this,"Data Has been retrieved",Toast.LENGTH_SHORT).show();
+
+                                                Toast.makeText(MainActivity.this,users.getUsername(),Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(MainActivity.this,users.getPassword(),Toast.LENGTH_SHORT).show();
+                        */
+
+                        if (users.getUsername().equals(username)) {
+                            if (users.getPassword().equals(password)) {
+                                //login start main activity
+                                Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                                startActivity(intent);
+
+                            } else {
+                                Toast.makeText(MainActivity.this, "The Password is incorrect", Toast.LENGTH_SHORT).show();
+                            }
                         } else {
-                            Toast.makeText(MainActivity.this, "The username or password is incorrect", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "The Username is incorrect", Toast.LENGTH_SHORT).show();
                         }
+
+
+
                     }
+                    Toast.makeText(MainActivity.this,"No Data Has been retrieved",Toast.LENGTH_SHORT).show();
+
                 }
 
             }

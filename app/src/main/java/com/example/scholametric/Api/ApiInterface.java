@@ -9,6 +9,6 @@ import retrofit2.http.GET;
 
 public interface ApiInterface {
 
-    @GET("android_login_api/")
+    @GET("android_login_api/v1")
     Call <List<Users>> getUsersDetails();
 }
