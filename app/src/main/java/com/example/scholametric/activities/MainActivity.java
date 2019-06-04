@@ -3,6 +3,7 @@ package com.example.scholametric.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import com.example.scholametric.Api.ApiInterface;
 import com.example.scholametric.R;
 import com.example.scholametric.model.Users;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     EditText pwd;
     Button login_btn;
     ApiInterface apiInterface;
+    private static final String TAG= "Response Data";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,14 +86,26 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {
                 if(response.isSuccessful()){
+                    Log.e("Success", new Gson().toJson(response.body()));
 
                     Users users = (Users) response.body();
-                    if(users!= null) {
-                        /* Toast.makeText(MainActivity.this,"Data Has been retrieved",Toast.LENGTH_SHORT).show();
+/*
 
-                                                Toast.makeText(MainActivity.this,users.getUsername(),Toast.LENGTH_SHORT).show();
-                                                Toast.makeText(MainActivity.this,users.getPassword(),Toast.LENGTH_SHORT).show();
-                        */
+                    Toast.makeText(MainActivity.this,"Connection was a success",Toast.LENGTH_SHORT).show();
+**/
+
+
+                    if(users!= null) {
+                        /*
+                        Toast.makeText(MainActivity.this,"Data Has been retrieved",Toast.LENGTH_SHORT).show();
+
+                        Toast.makeText(MainActivity.this,users.getUsername(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,users.getPassword(),Toast.LENGTH_SHORT).show();
+
+*/
+                        Log.i(TAG,users.getUsername());
+                        Log.i(TAG,users.getPassword());
+
 
                         if (users.getUsername().equals(username)) {
                             if (users.getPassword().equals(password)) {
@@ -105,18 +120,19 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "The Username is incorrect", Toast.LENGTH_SHORT).show();
                         }
 
-
-
                     }
                     Toast.makeText(MainActivity.this,"No Data Has been retrieved",Toast.LENGTH_SHORT).show();
 
-                }
 
+
+                }
+                Log.e("unSuccess", new Gson().toJson(response.errorBody()));
             }
 
             @Override
             public void onFailure(Call<List<Users>> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "Failed to make connection to server", Toast.LENGTH_SHORT).show();
+                Log.e("onFailure", t.toString());
             }
         });
     }
