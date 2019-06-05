@@ -7,9 +7,40 @@
     <string name="login_image">LoginImage</string>
     <string name="card_view_image">Card View Image</string>
     <string name="settings">Settings</string>
+    <string name="send_to">Send To</string>
+    <string name="to">To</string>
+    <string name="message">Message</string>
+    <string name="type_message_here">Type Message Here</string>
+    <string name="send_email">Send Email</string>
+    <string name="type_email_here">Type Email Here</string>
+    <string name="send_sms">Send Sms</string>
 
     // this is a string array for the second activity card textviews
     <string-array name="actvity2card">
+        <item>Student</item>
+        <item>Teachers</item>
+        <item>Health</item>
+        <item>Accommodation</item>
+        <item>Finance</item>
+        <item>Entertainment</item>
+        <item>Transport</item>
+        <item>Assignment</item>
+    </string-array>
+    <string-array name="Sms_Spinner">
+        <item>All</item>
+        <item>Parents</item>
+        <item>Students</item>
+        <item>Prefects</item>
+        <item>Class Teachers</item>
+        <item>Teachers</item>
+        <item>Class Monitors</item>
+        <item>Fees Defaulters</item>
+        <item>Requirements Defaulters</item>
+        <item>Foreign Parents</item>
+        <item>Foreign Students</item>
+        <item>Old Students</item>
+    </string-array>
+    <string-array name="Email_spinner">
         <item>Student</item>
         <item>Teachers</item>
         <item>Health</item>

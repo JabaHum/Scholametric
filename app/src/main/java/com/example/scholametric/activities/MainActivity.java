@@ -2,6 +2,7 @@ package com.example.scholametric.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     EditText pwd;
     Button login_btn;
     ApiInterface apiInterface;
-    private static final String TAG= "Response Data";
+    private static final String TAG = "Response Data";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,53 +57,50 @@ public class MainActivity extends AppCompatActivity {
                 String username = usr.getText().toString();
                 String password = pwd.getText().toString();
 
-                if(validateLogin(username, password)){
+                if (validateLogin(username, password)) {
                     //do login
-                    doLogin(username, password);
+                    //doLogin(username, password);
                     //doLogin();
+                    intentlogin();
                 }
 
             }
         });
     }
-    private boolean validateLogin(String username, String password){
-        if(username == null || username.trim().length() == 0){
+
+    private boolean validateLogin(String username, String password) {
+        if (username == null || username.trim().length() == 0&& username.equals("jaba")) {
             Toast.makeText(this, "Username is required", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if(password == null || password.trim().length() == 0){
+        if (password == null || password.trim().length() == 0&&password.equals("1234")) {
             Toast.makeText(this, "Password is required", Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
     }
-//TODO retrofit call section
-    private void doLogin(final String username,final String password){
+
+    //TODO retrofit call section
+    private void doLogin(final String username, final String password) {
         //final String username,final String password
 
-       Call <List<Users>> call = apiInterface.getUsersDetails();
+  Call <List<Users>> call = apiInterface.getUsersDetails();
         call.enqueue(new Callback<List<Users>>() {
 
             @Override
-            public void onResponse(Call<List<Users>> call, Response<List<Users>> response) {
+            public void onResponse(@NonNull Call <List<Users>> call, @NonNull Response<List<Users>> response) {
+
+
+
                 if(response.isSuccessful()){
+
                     Log.e("Success", new Gson().toJson(response.body()));
 
                     Users users = (Users) response.body();
-/*
-
-                    Toast.makeText(MainActivity.this,"Connection was a success",Toast.LENGTH_SHORT).show();
-**/
 
 
                     if(users!= null) {
-                        /*
-                        Toast.makeText(MainActivity.this,"Data Has been retrieved",Toast.LENGTH_SHORT).show();
 
-                        Toast.makeText(MainActivity.this,users.getUsername(),Toast.LENGTH_SHORT).show();
-                        Toast.makeText(MainActivity.this,users.getPassword(),Toast.LENGTH_SHORT).show();
-
-*/
                         Log.i(TAG,users.getUsername());
                         Log.i(TAG,users.getPassword());
 
@@ -130,11 +128,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<Users>> call, Throwable t) {
+            public void onFailure(@NonNull Call<List<Users>> call, @NonNull Throwable t) {
                 Toast.makeText(MainActivity.this, "Failed to make connection to server", Toast.LENGTH_SHORT).show();
                 Log.e("onFailure", t.toString());
             }
         });
     }
 
+    private void intentlogin(){
+       Intent intent = new Intent(MainActivity.this,DashboardActivity.class);
+       startActivity(intent);
+    }
 }
