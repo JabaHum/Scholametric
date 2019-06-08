@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="10dp"
-    tools:context=".activities.Staff">
+    tools:context=".activities.Students">
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="150dp">
         <ImageButton
-            android:id="@+id/add_staff"
+            android:id="@+id/add_student"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
@@ -26,7 +26,7 @@
         android:orientation="horizontal"
         android:layout_height="150dp">
         <ImageButton
-            android:id="@+id/list_staff"
+            android:id="@+id/list_students"
             android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

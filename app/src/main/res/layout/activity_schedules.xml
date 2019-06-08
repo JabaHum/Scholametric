@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
     tools:context=".activities.Schedules">
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/lesson_tt_btn"
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/lesson_timetable"/>
+        <Button
+            android:id="@+id/exam_tt_btn"
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/exam_timetable"/>
+        <Button
+            android:id="@+id/events_btn"
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="@string/events"/>
+    </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -35,7 +35,8 @@ public class Sms extends Activity implements AdapterView.OnItemSelectedListener 
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-// toast to show what has been selected
+
+        // toast to show what has been selected
         String item = parent.getItemAtPosition(position).toString();
 
         // Showing selected spinner item

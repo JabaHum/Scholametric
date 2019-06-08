@@ -50,51 +50,51 @@ public  class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CardViewh
 
                     //int v = getAdapterPosition();
                     switch(getAdapterPosition()) {
-                        case 1:
+                        case 0:
                             Intent settings = new Intent(v.getContext(), Settings.class);
                             v.getContext().startActivity(settings);
                             break;
-                        case 2:
+                        case 1:
                             Intent reports = new Intent(v.getContext(), ReportCards.class);
                             v.getContext().startActivity(reports);
                             break;
-                        case 3:
+                        case 2:
                             Intent electives = new Intent(v.getContext(), Electives.class);
                             v.getContext().startActivity(electives);
                             break;
-                        case 4:
+                        case 3:
                             Intent sms = new Intent(v.getContext(), Sms.class);
                             v.getContext().startActivity(sms);
                             break;
-                        case 5:
+                        case 4:
                             Intent email = new Intent(v.getContext(), Email.class);
                             v.getContext().startActivity(email);
                             break;
-                        case 6:
+                        case 5:
                             Intent database = new Intent(v.getContext(), Database.class);
                             v.getContext().startActivity(database);
                             break;
-                        case 7:
+                        case 6:
                             Intent students = new Intent(v.getContext(), Students.class);
                             v.getContext().startActivity(students);
                             break;
-                        case 8:
+                        case 7:
                             Intent staff = new Intent(v.getContext(), Staff.class);
                             v.getContext().startActivity(staff);
                             break;
-                        case 9:
+                        case 8:
                             Intent logs = new Intent(v.getContext(), Logs.class);
                             v.getContext().startActivity(logs);
                             break;
-                        case 10:
+                        case 9:
                             Intent stats = new Intent(v.getContext(), Statistics.class);
                             v.getContext().startActivity(stats);
                             break;
-                        case 11:
+                        case 10:
                             Intent schedules = new Intent(v.getContext(), Schedules.class);
                             v.getContext().startActivity(schedules);
                             break;
-                        case 12:
+                        case 11:
                             Intent accomodation = new Intent(v.getContext(), Accomodation.class);
                             v.getContext().startActivity(accomodation);
                             break;
