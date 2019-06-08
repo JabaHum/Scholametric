@@ -5,6 +5,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:gravity="center"
     tools:context=".activities.Lesson">
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="260dp">
+        <android.support.v7.widget.CardView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/text_view_class"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Class"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+                <TextView
+                    android:paddingTop="10dp"
+                    android:id="@+id/text_view_stream"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Stream"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+                <TextView
+                    android:paddingTop="10dp"
+                    android:id="@+id/text_view_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Subject"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="250dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:paddingTop="10dp"
+                    android:id="@+id/text_view_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Day"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:paddingTop="10dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusable="true" />
+                <TextView
+                    android:paddingTop="10dp"
+                    android:id="@+id/text_view_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="StartTime"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:paddingTop="10dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusable="true" />
+                <TextView
+                    android:paddingTop="10dp"
+                    android:id="@+id/text_view_end_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="EndTime"/>
+                <EditText
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:focusable="true" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
 
 </LinearLayout>
