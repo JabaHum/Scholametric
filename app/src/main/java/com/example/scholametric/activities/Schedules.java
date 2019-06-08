@@ -22,21 +22,21 @@ public class Schedules extends AppCompatActivity {
         lesson_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent lesson = new Intent();
+                Intent lesson = new Intent(Schedules.this,Lesson.class);
                 startActivity(lesson);
             }
         });
         exam_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent exam = new Intent();
+                Intent exam = new Intent(Schedules.this,Exam.class);
                 startActivity(exam);
             }
         });
         events.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent events = new Intent();
+                Intent events = new Intent(Schedules.this,Events.class);
                 startActivity(events);
             }
         });
