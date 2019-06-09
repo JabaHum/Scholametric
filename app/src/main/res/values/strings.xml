@@ -21,6 +21,9 @@
     <string name="events">Events</string>
     <string name="add_another_event">Add Another Event</string>
     <string name="save_events">Save Events</string>
+    <string name="subject">Subject</string>
+    <string name="stream">Stream</string>
+    <string name="textview_class">Class</string>
 
     // this is a string array for the second activity card textviews
     <string-array name="actvity2card">
@@ -48,13 +51,32 @@
         <item>Old Students</item>
     </string-array>
     <string-array name="Email_spinner">
-        <item>Student</item>
+        <item>All</item>
+        <item>Parents</item>
+        <item>Students</item>
+        <item>Prefects</item>
+        <item>Class Teachers</item>
         <item>Teachers</item>
-        <item>Health</item>
-        <item>Accommodation</item>
-        <item>Finance</item>
-        <item>Entertainment</item>
-        <item>Transport</item>
-        <item>Assignment</item>
+        <item>Class Monitors</item>
+        <item>Fees Defaulters</item>
+        <item>Requirements Defaulters</item>
+        <item>Foreign Parents</item>
+        <item>Foreign Students</item>
+        <item>Old Students</item>
+    </string-array>
+    <string-array name="Class_spinner">
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+        <item>S3</item>
+        <item>S4</item>
+        <item>S5</item>
+        <item>S6</item>
+    </string-array>
+    <string-array name="Stream_spinner">
+        <item></item>
+    </string-array>
+    <string-array name="Subjects_spinner">
+        <item></item>
     </string-array>
 </resources>

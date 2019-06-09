@@ -29,7 +29,7 @@
                     android:paddingTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="Class"/>
+                    android:text="@string/textview_class"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="30dp"/>
@@ -38,7 +38,7 @@
                     android:id="@+id/text_view_startDate"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="Stream"/>
+                    android:text="@string/stream"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="30dp"/>
@@ -47,7 +47,7 @@
                     android:id="@+id/text_view_endDate"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="Subject"/>
+                    android:text="@string/subject"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="30dp"/>

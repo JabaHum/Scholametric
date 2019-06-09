@@ -15,6 +15,7 @@ public class Sms extends Activity implements AdapterView.OnItemSelectedListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sms);
         // spinner element
         Spinner spinner = findViewById(R.id.spinner_text_to);
 
