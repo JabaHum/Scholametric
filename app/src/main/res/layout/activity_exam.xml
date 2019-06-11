@@ -6,6 +6,41 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activities.Exam">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_exam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="?colorPrimaryDark">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?actionBarSize"
+            android:padding="2dp"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/toolbar_exam_image_view"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="20"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/toolbar_exam_text_view"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:textColor="#fff"
+                android:text="Exam"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
     <Spinner
         android:id="@+id/exam_spinner"
         android:layout_width="match_parent"

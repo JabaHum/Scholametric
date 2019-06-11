@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".Subjects">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_subjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="?colorPrimaryDark">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?actionBarSize"
+            android:padding="2dp"
+            android:weightSum="100">
 
-</android.support.constraint.ConstraintLayout>
+            <ImageView
+                android:id="@+id/toolbar_subjects_image_view"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="20"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/toolbar_subjects_text_view"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:textColor="#fff"
+                android:text="Subjects"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>
