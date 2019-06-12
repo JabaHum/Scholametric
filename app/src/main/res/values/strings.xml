@@ -91,5 +91,11 @@
     <string name="exam_settings">Exam Settings</string>
     <string name="grades_olevel_settings">Grades OLevel </string>
     <string name="grades_alevel_settings">Grades ALevel</string>
-
+    <string name="fees_structure">Fees Structure</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="staff_salaries">Staff Salaries</string>
+    <string name="olevel_subjects">OLevel</string>
+    <string name="alevel_subjects">Alevel</string>
+<string name="email_notification">Email</string>
+    <string name="sms_notification">SMS</string>
 </resources>
