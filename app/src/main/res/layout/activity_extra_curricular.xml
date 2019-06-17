@@ -31,16 +31,72 @@
 
             <TextView
                 android:id="@+id/toolbar_extra_text_view"
-                android:layout_gravity="center_vertical"
-                android:layout_width="50dp"
+                android:layout_width="283dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="50"
-                android:textColor="#fff"
                 android:text="Extra Curricular"
+                android:textColor="#fff"
                 android:textSize="24sp" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_margin="2dp"
+        android:padding="4dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_teachers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:text="Enable Activities"
+            android:textSize="24sp"/>
 
-
+        <CheckBox
+            android:id="@+id/checkbox_extra_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Music Dance Drama"/>
+        <CheckBox
+            android:id="@+id/checkbox_extra_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Football"/>
+        <CheckBox
+            android:id="@+id/checkbox_extra_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="BasketBall"/>
+        <CheckBox
+            android:id="@+id/checkbox_extra_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Volley Ball"/>
+        <CheckBox
+            android:id="@+id/checkbox_extra_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Chess"/>
+        <CheckBox
+            android:id="@+id/checkbox_extra_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Academic Competitions"/>
+    </LinearLayout>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:text="save Settings"/>
 </LinearLayout>

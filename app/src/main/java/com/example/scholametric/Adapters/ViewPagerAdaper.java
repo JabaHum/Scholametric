@@ -10,6 +10,7 @@ import com.example.scholametric.Fragments.ClassSettingsFragment;
 import com.example.scholametric.Fragments.ContactFragment;
 import com.example.scholametric.Fragments.StaffCatergoryFragment;
 import com.example.scholametric.Fragments.StudentCatergoryFragment;
+import com.example.scholametric.Fragments.StudentDomitoryFragment;
 import com.example.scholametric.R;
 
 public class ViewPagerAdaper  extends FragmentPagerAdapter {
@@ -30,7 +31,7 @@ public class ViewPagerAdaper  extends FragmentPagerAdapter {
         }else if (i==3){
             return new ClassSettingsFragment();
         }else{
-            return new StudentCatergoryFragment();
+            return new StudentDomitoryFragment();
         }
     }
 

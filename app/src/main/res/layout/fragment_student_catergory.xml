@@ -7,65 +7,118 @@
     tools:context=".Fragments.StudentCatergoryFragment">
 
     <LinearLayout
-        android:layout_margin="2dp"
+        android:layout_margin="4dp"
+        android:padding="4dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_view_student_categories"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Student Categories"/>
         <RadioGroup
             android:id="@+id/student_catergories"
+            android:layout_margin="2dp"
+            android:padding="2dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <RadioButton
             android:id="@+id/radio_prefects"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="Prefects"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <RadioButton
             android:id="@+id/radio_class_monitors"
             android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="Class Monitors"
             android:layout_height="wrap_content" />
         <RadioButton
             android:id="@+id/radio_dorm_captains"
             android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:text="Dorm Captains"
             android:layout_height="wrap_content" />
         </RadioGroup>
     </LinearLayout>
     <LinearLayout
-        android:layout_margin="2dp"
+        android:layout_margin="4dp"
+        android:padding="4dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_view_staff_categories"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Staff Categories"/>
         <RadioGroup
             android:id="@+id/special_catergories"
+            android:layout_margin="2dp"
+            android:padding="2dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <RadioButton
                 android:id="@+id/radio_finacially_challenged"
                 android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Financially Challenged"
                 android:layout_height="wrap_content" />
             <RadioButton
                 android:id="@+id/radio_orphans"
                 android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Orphans"
                 android:layout_height="wrap_content" />
             <RadioButton
                 android:id="@+id/radio_sports_students"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Sports Students"/>
             <RadioButton
                 android:id="@+id/radio_disabled"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Disabled"/>
             <RadioButton
                 android:id="@+id/radio_staff_children"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Staff Children"/>
             <RadioButton
                 android:id="@+id/radio_child_family_head"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Child Family Head"/>
         </RadioGroup>
     </LinearLayout>
 <Button
-    android:id="@+id/btn_save_settings_students"
+    android:id="@+id/btn_save_settings_students_categories"
+    android:layout_margin="4dp"
+    android:padding="4dp"
     android:layout_width="match_parent"
     android:layout_height="70dp"
     android:text="Save Settings"/>

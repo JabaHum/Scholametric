@@ -1,14 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:orientation="vertical"
+    android:padding="4dp"
     tools:context=".Fragments.PaymentMethodsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:padding="2dp">
+        <TextView
+            android:id="@+id/txt_payment_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="Payment Methods"
+            android:textAlignment="center"
+            android:textSize="24sp"/>
+        <CheckBox
+            android:id="@+id/checkbox_payment_methods_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Bank Slip"/>
+        <CheckBox
+            android:id="@+id/checkbox_payment_methods_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Cheque"/>
+        <CheckBox
+            android:id="@+id/checkbox_payment_methods_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Cash"/>
+        <CheckBox
+            android:id="@+id/checkbox_payment_methods_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Mobile Money"/>
+        <CheckBox
+            android:id="@+id/checkbox_payment_methods_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="EFT / Wire Transfer"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:padding="2dp">
+        <TextView
+            android:id="@+id/txt_banks_accepted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:text="Banks Accepted"
+            android:textSize="24sp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_banks_accepted_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Barclays"/>
+        <CheckBox
+            android:id="@+id/checkbox_banks_accepted_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="KCB"/>
+        <CheckBox
+            android:id="@+id/checkbox_banks_accepted_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Stanbic"/>
+        <CheckBox
+            android:id="@+id/checkbox_banks_accepted_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Centenary"/>
+        <CheckBox
+            android:id="@+id/checkbox_banks_accepted_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Tropical"/>
+        <CheckBox
+            android:id="@+id/checkbox_banks_accepted_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="DFCU"/>
+        <CheckBox
+            android:id="@+id/checkbox_banks_accepted_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Equity"/>
+        <CheckBox
+            android:id="@+id/checkbox_banks_accepted_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Orient"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_save_settings_payment_methods"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/save_settings"/>
+
+</LinearLayout>

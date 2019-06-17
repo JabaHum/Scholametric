@@ -31,12 +31,13 @@
 
             <TextView
                 android:id="@+id/toolbar_events_text_view"
-                android:layout_gravity="center_vertical"
-                android:layout_width="50dp"
+                android:layout_width="313dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="50"
+                android:text="@string/events"
                 android:textColor="#fff"
-                android:text="Events"
                 android:textSize="24sp" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>

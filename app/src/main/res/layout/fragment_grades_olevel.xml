@@ -1,92 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
+    android:padding="4dp"
+    android:layout_margin="4dp"
 android:orientation="vertical"
 tools:context=".Fragments.GradesOlevelFragment">
 
 <LinearLayout
     android:layout_margin="2dp"
+    android:padding="2dp"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TextView
         android:id="@+id/textview_d1mark"
+        android:text="@string/d1_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_d1mark"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/textview_o_comment_1"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="@string/comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_1"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <TextView
         android:id="@+id/textview_d2mark"
+        android:text="@string/d2_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_d2mark"
         android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/textview_o_comment_2"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="@string/comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_2"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
         android:layout_height="40dp" />
     <TextView
         android:id="@+id/textview_c3mark"
+        android:text="@string/c3_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_c3mark"
         android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/textview_o_comment_3"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_3"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
         android:layout_height="40dp" />
     <TextView
         android:id="@+id/textview_c4mark"
+        android:text="@string/c4_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_c4mark"
         android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/textview_o_comment_4"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_4"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
         android:layout_height="40dp" />
     <TextView
         android:id="@+id/textview_c5mark"
+        android:text="@string/c5_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_c5mark"
         android:layout_width="match_parent"
+        android:textSize="18sp"
         android:layout_height="40dp" />
     <TextView
+        android:id="@+id/textview_o_comment_5"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_5"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="@string/c6_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:id="@+id/textview_c6mark"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_c6mark"
         android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/textview_o_comment_6"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_6"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
         android:layout_height="40dp" />
     <TextView
         android:id="@+id/textview_p7mark"
+        android:text="@string/p7_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_p7mark"
         android:layout_width="match_parent"
+        android:textSize="18sp"
         android:layout_height="40dp" />
     <TextView
+        android:id="@+id/textview_o_comment_7"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_7"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="@string/p8_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:id="@+id/textview_p8mark"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_p8mark"
         android:layout_width="match_parent"
+        android:textSize="18sp"
         android:layout_height="40dp" />
     <TextView
+        android:id="@+id/textview_o_comment_8"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_8"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="@string/f9_mark"
+        android:textSize="18sp"
+        android:textColor="#000"
         android:id="@+id/textview_f9mark"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_f9mark"
+        android:textSize="18sp"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+    <TextView
+        android:id="@+id/textview_o_comment_9"
+        android:layout_width="match_parent"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:text="Comment"
+        android:layout_height="40dp" />
+    <EditText
+        android:id="@+id/edt_o_comment_9"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/btn_grades_olevel_save_settings"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:text="@string/save_settings"/>
 </LinearLayout>
-<Button
-    android:id="@+id/btn_grades_olevel_save_settings"
-    android:layout_width="match_parent"
-    android:layout_height="70dp"
-    android:text="Save settings"/>
-</LinearLayout>
+
+</ScrollView>

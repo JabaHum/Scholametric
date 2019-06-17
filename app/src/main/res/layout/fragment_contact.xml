@@ -13,91 +13,146 @@
     <TextView
         android:id="@+id/textview_schoolname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="School Name"/>
     <EditText
         android:id="@+id/edt_schoolname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000"/>
     <TextView
         android:id="@+id/textview_schoolbadge"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="School Badge"/>
     <EditText
         android:id="@+id/edt_schoolbadge"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000"/>
     <TextView
         android:id="@+id/textview_phonenumber1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:text="Phone Number"
+        android:layout_height="40dp" />
     <EditText
         android:id="@+id/edt_phonenumber1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000" />
     <TextView
         android:id="@+id/textview_phonenumber2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="Phone Number"/>
     <EditText
         android:id="@+id/edt_phonenumber2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000" />
     <TextView
         android:id="@+id/textview_phonenumber3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="Phone Number"/>
     <EditText
         android:id="@+id/edt_phonenumber3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000"/>
     <TextView
         android:id="@+id/textview_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="Email"/>
     <EditText
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000" />
     <TextView
         android:id="@+id/textview_address"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="Address"/>
     <EditText
         android:id="@+id/edt_address"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000"/>
     <TextView
         android:id="@+id/textview_website"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="Website"/>
     <EditText
         android:id="@+id/edt_website"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000" />
     <TextView
         android:id="@+id/textview_box"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="BOX NO."/>
     <EditText
         android:id="@+id/edt_box"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000" />
     <TextView
         android:id="@+id/textview_country"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="Country"/>
     <EditText
         android:id="@+id/edt_country"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000"/>
     <TextView
         android:id="@+id/textview_exam_center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_height="40dp"
+        android:text="Exam Center Number"/>
     <EditText
         android:id="@+id/edt_exam_center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="40dp"
+        android:textSize="18sp"
+        android:textColor="#000"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -109,7 +164,10 @@
             <TextView
                 android:id="@+id/textview_gender"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textSize="18sp"
+                android:text="Gender"
+                android:textColor="#000"
+                android:layout_height="40dp"/>
             <RadioGroup
                 android:id="@+id/radio_gender"
                 android:layout_width="match_parent"

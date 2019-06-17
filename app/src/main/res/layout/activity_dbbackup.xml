@@ -31,15 +31,93 @@
 
             <TextView
                 android:id="@+id/toolbar_db_text_view"
-                android:layout_gravity="center_vertical"
-                android:layout_width="50dp"
+                android:layout_width="273dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="50"
-                android:textColor="#fff"
+                android:textAlignment="center"
                 android:text="DB Backup"
+                android:textColor="#fff"
                 android:textSize="24sp" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_view_bk_freq"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:text="Database Backup Frequency"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:id="@+id/radio_backup_freq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="4dp">
+            <RadioButton
+                android:id="@+id/radio_daily"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Daily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/radio_weekly"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Weekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/radio_monthly"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Monthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_backup_time"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Automatic Backup Time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edt_backup_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txt_destination_backup"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:text="Destination Backup"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edt_destination_backup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_dbbackup_save_settings"
+            android:layout_width="match_parent"
+            android:padding="4dp"
+            android:layout_margin="4dp"
+            android:layout_height="70dp"
+            android:text="@string/save_settings"/>
+    </LinearLayout>
 
 </LinearLayout>

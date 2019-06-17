@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:padding="0dp"
     android:orientation="vertical"
     tools:context=".Health">
     <android.support.v7.widget.Toolbar
@@ -31,14 +33,66 @@
 
             <TextView
                 android:id="@+id/toolbar_health_text_view"
-                android:layout_gravity="center_vertical"
-                android:layout_width="50dp"
+                android:layout_width="315dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="50"
-                android:textColor="#fff"
                 android:text="Health"
+                android:textColor="#fff"
                 android:textSize="24sp" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:layout_margin="2dp"
+            android:padding="2dp"
+            android:text="Health Reports"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:id="@+id/health_reports"
+            android:layout_height="wrap_content" />
+        <RadioGroup
+            android:layout_margin="2dp"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/radio_health_weekly"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Weekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Monthly"
+                android:id="@+id/radio_health_monthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Termly"
+                android:id="@+id/radio_health_termly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+        <Button
+            android:id="@+id/btn_save_settings_health"
+            android:layout_width="match_parent"
+            android:text="@string/save_settings"
+            android:textSize="18sp"
+            android:layout_height="70dp" />
+    </LinearLayout>
 
 </LinearLayout>

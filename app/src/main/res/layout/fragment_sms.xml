@@ -1,14 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragments.SmsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="4dp">
+        <TextView
+            android:id="@+id/txt_teachers"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SMS to Categories"
+            android:textSize="24sp"/>
+        
+        <CheckBox
+            android:id="@+id/checkbox_sms_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="All Active Members"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="All Active Parents"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="All Active Students"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="All Active Teachers"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="All Active Prefects"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="All Active Class Teachers"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="All Active Class Monitors"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="School Fees Defaulters"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Other Requirements Defaulters"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Foreign Parents/Guardians"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Foreign Students"/>
+        <CheckBox
+            android:id="@+id/checkbox_sms_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="All Old Students"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:text="save settings"
+        android:textSize="18sp"/>
+</LinearLayout>

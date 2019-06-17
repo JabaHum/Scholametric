@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="4dp"
+    android:layout_margin="4dp"
     android:orientation="vertical"
     tools:context=".Fragments.ExamsSettingsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:orientation="vertical"
+        android:layout_margin="4dp"
+        android:padding="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RadioGroup
@@ -17,14 +20,23 @@
             android:layout_height="wrap_content">
             <RadioButton
                 android:id="@+id/radio_bot"
+                android:textSize="18sp"
+                android:text="@string/bot"
+                android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <RadioButton
                 android:id="@+id/radio_mid"
+                android:textSize="18sp"
+                android:text="@string/mid_term"
+                android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <RadioButton
                 android:id="@+id/radio_eod"
+                android:textSize="18sp"
+                android:text="@string/bot"
+                android:textColor="#000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </RadioGroup>
@@ -32,7 +44,7 @@
             android:id="@+id/btn_exams_save_settings"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="Save Settings"/>
+            android:text="@string/save_settings"/>
     </LinearLayout>
 
 </LinearLayout>

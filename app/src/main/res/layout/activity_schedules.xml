@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="5dp"
     tools:context=".activities.Schedules">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_schedules"
@@ -32,12 +31,13 @@
 
             <TextView
                 android:id="@+id/toolbar_schedules_text_view"
-                android:layout_gravity="center_vertical"
-                android:layout_width="50dp"
+                android:layout_width="315dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="50"
-                android:textColor="#fff"
                 android:text="Schedules"
+                android:textColor="#fff"
                 android:textSize="24sp" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
