@@ -115,7 +115,7 @@ public  class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CardViewh
     // Create new views (invoked by the layout manager)
     @NonNull
     @Override
-    public CustomAdapter.CardViewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public CardViewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.rowlayout,viewGroup,false);
 

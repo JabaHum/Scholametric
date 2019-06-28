@@ -121,7 +121,7 @@ public class SettingsAdapter  extends RecyclerView.Adapter{
         return mData.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends ViewHolder{
         @SuppressLint("StaticFieldLeak")
         static TextView textView;
         @SuppressLint("StaticFieldLeak")
